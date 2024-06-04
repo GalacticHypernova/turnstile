@@ -26,6 +26,10 @@ const props = defineProps({
     type: Number,
     default: 1000 * 250,
   },
+  required: {
+    type: Boolean,
+    default: false
+  }
 })
 
 const emit = defineEmits<{
@@ -83,5 +87,6 @@ defineExpose({ reset })
   <component
     :is="element"
     ref="el"
+    :required
   />
 </template>
